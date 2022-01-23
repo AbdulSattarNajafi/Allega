@@ -1,0 +1,82 @@
+.abonnieren {
+  background-color: $gray-100;
+  padding: 97px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+
+  &__form {
+    width: 100%;
+
+    &-row {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    &-checkbox {
+      margin-right: 58px;
+      margin-bottom: 20px;
+    }
+
+    &-input {
+      width: calc(50% - 15px);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+
+      label {
+        font-size: 14px;
+        line-height: 20px;
+
+        @include media-breakpoint-down(md) {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      input {
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $gray-700;
+        padding: 8px 0;
+        color: $black;
+
+        &:focus {
+          border-color: $black;
+          outline: none;
+        }
+      }
+    }
+
+    &-space {
+      margin-right: 30px;
+
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+      }
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      line-height: 20px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: flex-end;
+      padding: 55px 0 15px 0;
+    }
+  }
+}

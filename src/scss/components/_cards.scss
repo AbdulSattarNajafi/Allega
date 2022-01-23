@@ -1,0 +1,128 @@
+.bordered__card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray-100;
+  color: $primary;
+  transition: $hover-transition;
+
+  &-img img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  &-content {
+    padding: 75px 32px 24px 32px;
+  }
+
+  &-footer {
+    padding: 30px 16px;
+  }
+
+  &-footerParagraph {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: $gray-700;
+    line-height: 23px;
+    border: 1px solid $gray-700;
+    padding: 0 8px;
+    margin-bottom: 9px;
+  }
+
+  &-footerTitle {
+    color: $primary;
+  }
+
+  &-title {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -13px;
+      width: 43px;
+      height: 8px;
+      background-color: transparent;
+      transition: $hover-transition;
+    }
+  }
+
+  &:hover {
+    border-color: $secondary;
+    color: $secondary;
+  }
+
+  &:hover &-title::before {
+    background-color: $secondary;
+  }
+}
+
+// simple cards
+.card {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  color: $gray-700;
+  transition: $hover-transition;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  &-container {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    height: 100%;
+
+    &-background {
+      background-color: $gray-100;
+      padding: 0 24px;
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      padding: 24px 0;
+    }
+
+    &-subtitle {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      color: $gray-700;
+      line-height: 23px;
+      border: 1px solid $gray-700;
+      padding: 0 8px;
+      margin-bottom: 9px;
+    }
+
+    &-description {
+      margin: 16px 0;
+      color: $gray-700;
+    }
+
+    &-icon {
+      margin-top: auto;
+    }
+
+    &-iconArrow {
+      display: inline-block;
+      font-size: 1rem;
+      transform: rotate(-45deg);
+    }
+  }
+}

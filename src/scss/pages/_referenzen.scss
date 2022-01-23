@@ -1,0 +1,180 @@
+.referenzen__section {
+  padding-bottom: 75px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 60px;
+  }
+
+  &-filter {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.multiselect {
+  position: relative;
+  width: 100%;
+  border: 1px solid $gray-100;
+
+  &-label {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 11px;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0;
+    cursor: pointer;
+    height: 56px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      height: 46px;
+    }
+
+    &-text {
+      width: 100%;
+      padding: 16px 24px;
+
+      @include media-breakpoint-down(md) {
+        padding: 11px 16px;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      right: 24px;
+      top: 17px;
+      font-size: 20px;
+      z-index: 10;
+
+      @include media-breakpoint-down(md) {
+        right: 16px;
+        top: 12px;
+      }
+    }
+
+    &-close {
+      display: none;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: $white;
+    border: 1px solid $gray-100;
+    padding: 0 24px;
+    overflow: hidden;
+    transition: 0.4s;
+    z-index: 20;
+
+    @include media-breakpoint-down(md) {
+      top: 45px;
+      padding: 0 16px;
+    }
+
+    option {
+      position: relative;
+      margin-bottom: 8px;
+      display: block;
+      padding-left: 54px;
+      line-height: 30px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 40px;
+      }
+
+      &:hover {
+        color: $black;
+      }
+
+      &:first-child {
+        margin-top: 21px;
+      }
+
+      &:last-child {
+        margin-bottom: 21px;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $primary;
+        background: transparent;
+
+        @include media-breakpoint-down(md) {
+          width: 18px;
+          height: 18px;
+          top: 6px;
+          left: 6px;
+        }
+      }
+    }
+  }
+}
+#first-select {
+  z-index: 28;
+}
+#second-select {
+  z-index: 24;
+}
+
+// JS class
+.multiselect.active .multiselect__title-expand {
+  display: none;
+}
+
+.multiselect.active .multiselect__title-close {
+  display: block;
+}
+
+.multiselect.active > .multiselect__container {
+  height: auto;
+}
+.multiselect.active > .multiselect__container > option {
+  display: block;
+}
+
+.multiselect > .multiselect__container > option.selected::after {
+  content: '';
+  background: $secondary;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  @include media-breakpoint-down(md) {
+    width: 12px;
+    height: 12px;
+    top: 9px;
+    left: 9px;
+  }
+}

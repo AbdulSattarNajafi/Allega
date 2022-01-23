@@ -1,0 +1,169 @@
+.aufgaben {
+  padding-top: 56px;
+  padding-bottom: 46px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  &__content {
+    padding: 34px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 20px 0;
+    }
+    &-list {
+      padding: 18px 0;
+      padding-left: 1.4rem;
+    }
+    &-item {
+      list-style-type: disc;
+      margin-top: 1rem;
+    }
+  }
+}
+
+// bewerben section
+.bewerben {
+  background-color: $gray-100;
+  padding-top: 76px;
+  padding-bottom: 100px;
+
+  &-address {
+    font-style: italic;
+    margin: 45px 0 40px 0;
+  }
+
+  &__form {
+    &-row {
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 53px;
+    }
+
+    &-checkbox {
+      margin-right: 59px;
+    }
+
+    &-rowInput {
+      display: flex;
+      flex-direction: column;
+      width: calc(50% - 15px);
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 30px;
+
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+        }
+      }
+
+      label {
+        font-size: 14px;
+        color: $gray-700;
+        line-height: 20px;
+      }
+
+      input {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 18px;
+        color: $black;
+        line-height: 28px;
+        padding: 8px 0;
+        border-bottom: 1px solid $gray-700;
+        margin-bottom: 35px;
+        transition: $hover-transition;
+
+        &:focus {
+          outline: none;
+          border-color: $black;
+        }
+      }
+    }
+
+    &-textarea {
+      flex-direction: column;
+      margin-top: -20px;
+
+      label {
+        font-size: 14px;
+        color: $gray-700;
+        line-height: 20px;
+        margin-bottom: 15px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 202px;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 18px;
+        color: $black;
+        line-height: 28px;
+        padding: 8px 11;
+        border: 1px solid $gray-700;
+        resize: vertical;
+        transition: $hover-transition;
+
+        &:focus {
+          outline: none;
+          border-color: $black;
+        }
+      }
+    }
+
+    &-upload {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-fileInput {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 20px;
+      height: 36px;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    &-icon {
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    &-rowTerms {
+      flex-direction: column;
+      margin-top: -20px;
+
+      p {
+        font-size: 14px;
+        color: $gray-700;
+        line-height: 20px;
+        margin-bottom: 14px;
+
+        &:first-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: flex-end;
+      margin: 35px 0;
+    }
+  }
+}

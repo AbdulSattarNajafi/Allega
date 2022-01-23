@@ -1,0 +1,269 @@
+.header {
+  &-line {
+    background: $secondary;
+    width: 80%;
+    height: 4px;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(md) {
+      height: 3px;
+    }
+  }
+
+  &__navbar {
+    margin: 14px 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &-brand {
+      padding-left: 42px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 10px;
+      }
+      img {
+        @include media-breakpoint-down(xl) {
+          width: 90%;
+          height: auto;
+        }
+
+        @include media-breakpoint-down(lg) {
+          width: 80%;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 70%;
+        }
+      }
+    }
+
+    &-list {
+      min-height: 108px;
+    }
+
+    &-toggler {
+      padding: 0;
+      line-height: 1;
+
+      &:focus,
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin: 0 32px;
+
+      @include media-breakpoint-down(xxl) {
+        margin: 0 16px;
+      }
+      @include media-breakpoint-down(xl) {
+        margin: 0 8px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin: 8px 0;
+      }
+    }
+
+    &-link {
+      padding: 0;
+      color: $primary;
+      font-weight: 500;
+      line-height: 24px;
+      transition: $hover-transition;
+
+      &:active,
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    &-active {
+      color: $secondary;
+    }
+  }
+
+  &-container {
+    height: 100%;
+  }
+
+  &__cart {
+    &-item {
+      display: flex;
+      align-items: center;
+      min-height: 108px;
+      padding: 0 40px;
+
+      &:first-child {
+        border-right: 1px solid $gray-200;
+      }
+
+      @include media-breakpoint-down(xxl) {
+        padding: 0 26px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        min-height: auto;
+        margin-top: 1rem;
+        padding: 0;
+        &:first-child {
+          margin-top: 1.2rem;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: $primary;
+      transition: $hover-transition;
+
+      &:hover {
+        color: currentColor;
+      }
+    }
+
+    &-count {
+      position: absolute;
+      top: -12px;
+      right: -20px;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background-color: $secondary;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 26px;
+    }
+  }
+
+  &__form {
+    margin-top: 34px;
+    margin-bottom: 11px;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      border: none;
+      background-color: $gray-100;
+      padding: 20px 10px 20px 20px;
+      font-size: 1.25rem;
+
+      @include media-breakpoint-down(lg) {
+        padding: 10px;
+      }
+    }
+
+    &-input {
+      border: none;
+      background-color: $gray-100;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      @include media-breakpoint-down(lg) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      &:focus {
+        background-color: $gray-100;
+      }
+    }
+  }
+}
+
+// Hero section
+.hero {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+  }
+
+  &__text {
+    flex: 0 0 48%;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      order: 2;
+      flex: 0 0 100%;
+    }
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      max-width: 555px;
+      width: 100%;
+      padding: 0 2.5rem;
+      transform: translateY(-50%);
+
+      @include media-breakpoint-down(xl) {
+        padding: 0.75rem 1rem;
+      }
+
+      @include media-breakpoint-down(lg) {
+        position: relative;
+        top: 0;
+        transform: translateY(0);
+        max-width: 100%;
+        padding: 2.5rem 1rem;
+        padding-bottom: 0;
+      }
+    }
+
+    &-title {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: -2.2rem;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: $secondary;
+
+        @include media-breakpoint-down(xl) {
+          left: -0.8rem;
+        }
+      }
+    }
+
+    &-paragraph {
+      margin: 23px 0;
+      color: $gray-700;
+    }
+
+    &-btn {
+      margin: 28px 0;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    flex: 0 0 52%;
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

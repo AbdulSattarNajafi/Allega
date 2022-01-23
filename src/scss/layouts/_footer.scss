@@ -1,0 +1,172 @@
+.footer {
+  background: url('./../assets/footer-bg.png'), $primary;
+  background-position: right bottom;
+  background-size: 64% 80%;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(xxl) {
+    background-size: 66% 80%;
+  }
+
+  @include media-breakpoint-down(xl) {
+    background-size: 66% 70%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-size: 66% 60%;
+  }
+
+  @include media-breakpoint-down(md) {
+    background: $primary;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  &__social {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &-logo {
+      @include media-breakpoint-down(md) {
+        width: 50%;
+      }
+    }
+
+    &-address {
+      margin: 45px 0;
+      font-size: 16px;
+      color: $white;
+      font-weight: 300;
+      line-height: 24px;
+
+      @include media-breakpoint-down(md) {
+        margin: 0;
+        width: 50%;
+      }
+    }
+
+    &-list {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin: 28px 0 20px 0;
+      }
+    }
+
+    &-item {
+      margin-bottom: 16px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-link {
+      color: $white;
+      font-family: inherit;
+      transition: $hover-transition;
+
+      &:hover {
+        color: $gray-300;
+      }
+    }
+
+    &-icon {
+      font-size: 1.2rem;
+      margin-right: 20px;
+
+      @include media-breakpoint-down(lg) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__list {
+    &-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $gray-200;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-item {
+      margin-top: 12px;
+      @include media-breakpoint-down(md) {
+        margin-top: 8px;
+      }
+    }
+
+    &-link {
+      font-family: inherit;
+      color: $white;
+      transition: $hover-transition;
+
+      &:hover {
+        color: $gray-300;
+      }
+    }
+  }
+
+  &__line-wrapper {
+    margin-top: 57px;
+    margin-bottom: 57px;
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &-line {
+    border-top: 1px solid $gray-400;
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      font-size: 14px;
+    }
+
+    &-right {
+      color: $white;
+      @include media-breakpoint-down(sm) {
+        order: 2;
+        text-align: center;
+      }
+    }
+  }
+
+  &__terms {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 40px;
+
+      @include media-breakpoint-down(lg) {
+        margin-right: 20px;
+      }
+    }
+
+    &-link {
+      color: $white;
+      transition: $hover-transition;
+
+      &:hover {
+        color: $gray-300;
+      }
+    }
+  }
+}

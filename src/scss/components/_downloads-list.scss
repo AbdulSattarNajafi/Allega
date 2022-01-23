@@ -1,0 +1,103 @@
+.downloads__list {
+  width: 100%;
+
+  &-item {
+    border-bottom: 1px solid $primary;
+    padding: 0;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: flex-end;
+    color: currentColor;
+    padding-bottom: 30px;
+    transition: $hover-transition;
+
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 12px;
+    }
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+
+  &-iconLeft {
+    width: 50px;
+    height: 86px;
+    margin-right: 36px;
+    font-size: 4.2rem;
+
+    @include media-breakpoint-down(lg) {
+      width: 40px;
+      height: 75px;
+      font-size: 3.3rem;
+      margin-right: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 30px;
+      height: 53px;
+      font-size: 2.6rem;
+      margin-right: 20px;
+    }
+  }
+
+  &-content {
+    flex: 0 0 calc(100% - 88px);
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 calc(100% - 70px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 calc(100% - 61px);
+    }
+  }
+
+  &-size {
+    color: $primary;
+    font-size: 16px;
+    line-height: 32px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+    }
+  }
+
+  &-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  &-title {
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }
+
+  &-iconRight {
+    font-size: 1.6rem;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 1.4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+button:focus,
+button:active {
+  box-shadow: none;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 243px;
+  border-radius: 0;
+  padding: 16px;
+  color: $primary;
+  padding-left: 24px;
+  font-size: 1rem;
+  line-height: 1;
+
+  @include media-breakpoint-down(md) {
+    min-width: 200px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 12px 16px;
+  }
+
+  &-icon {
+    transform: rotate(-45deg);
+    transition: $hover-transition;
+  }
+
+  &:hover &-icon {
+    transform: rotate(-45deg) translateX(4px);
+  }
+
+  &-lg {
+    min-width: 347px;
+
+    @include media-breakpoint-down(lg) {
+      min-width: 300px;
+    }
+
+    @include media-breakpoint-down(md) {
+      min-width: 260px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-width: 230px;
+    }
+  }
+}
+
+.dark-btn {
+  color: $white;
+}
+
+.btn__primary-custom {
+  border: none;
+  border-radius: 0;
+  padding: 16px 70px 16px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px 45px 10px 16px;
+  }
+}
+
+// Filter Button
+.fitler-btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  color: $primary;
+  font-weight: 500;
+  line-height: 32px;
+  padding: 12px 24px;
+
+  @include media-breakpoint-down(md) {
+    line-height: 25px;
+    padding: 10px 16px;
+  }
+}

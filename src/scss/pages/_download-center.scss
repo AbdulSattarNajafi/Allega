@@ -1,0 +1,124 @@
+.download-tabs {
+  padding-top: 107px;
+  padding-bottom: 100px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+}
+
+// Tabs
+.tabs {
+  display: flex;
+
+  &__list {
+    position: relative;
+    border-bottom: none;
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+
+    &-btn {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      font-weight: 500;
+      font-size: 44px;
+      color: $primary;
+      padding: 0 5px;
+      line-height: 66px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: $gray-700;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 36px;
+        line-height: 50px;
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  &__list-btn.active::after {
+    background-color: $secondary;
+  }
+
+  &__container {
+    padding-top: 100px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 80px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+    }
+
+    &-content {
+      display: none;
+    }
+  }
+}
+
+// JS class for active tab
+.tabs__container-active {
+  display: block;
+}
+
+// Accordions
+.accordion-flush .accordion-item {
+  border: 1px solid $gray-100;
+
+  &:first-child {
+    border-top: 1px solid $gray-100;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $gray-100;
+  }
+}
+
+.accordion-button {
+  font-size: 44px;
+  line-height: 59px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referenzen</title>
+  </head>
+  <body>
+    <!-- ========== Start Header =========== -->
+    <header class="header">
+      <div class="header-line"></div>
+      <!-- Nav Menu -->
+      <nav class="navbar navbar-expand-lg header__navbar">
+        <div class="container-fluid header-container">
+          <a class="navbar-brand header__navbar-brand" href="./../index.html">
+            <img src="./../assets/allega-logo.png" alt="Allega logo" />
+          </a>
+          <button
+            class="navbar-toggler header__navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav header__navbar-list">
+              <li class="nav-item header__navbar-item">
+                <a
+                  class="nav-link header__navbar-link"
+                  aria-current="page"
+                  href="./product.html"
+                  >Produkte</a
+                >
+              </li>
+              <li class="nav-item header__navbar-item">
+                <a class="nav-link header__navbar-link" href="#">Lösungen</a>
+              </li>
+              <li class="nav-item header__navbar-item">
+                <a class="nav-link header__navbar-link" href="#">Services</a>
+              </li>
+              <li class="nav-item header__navbar-item">
+                <a class="nav-link header__navbar-link" href="#">Unternehmen</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav header__cart">
+              <li class="nav-item header__cart-item">
+                <a class="header__cart-link" href="#">
+                  <span class="header__cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                  <span class="header__cart-count">2</span>
+                </a>
+              </li>
+              <li class="nav-item header__cart-item">
+                <a class="header__cart-link" href="#"><span class="header__cart-userIcon">
+                  <i class="far fa-user"></i></a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Search Area -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 d-none d-sm-block"></div>
+          <div class="col-sm-6">
+            <form action="#" class="header__form">
+            <div class="input-group">
+              <button class="input-group-text header__form-icon" id="inputGroup-sizing-default"><i class="fas fa-search"></i></button>
+              <input type="search" class="form-control header__form-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Search">
+            </div>
+          </form>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+        
+      </div>
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero__text">
+          <div class="hero__text-content">
+            <h1 class="hero__text-title">Referenzen</h1>
+          </div>
+
+        </div>
+        <div class="hero__image">
+        </div>
+      </div>
+
+    </header>
+    <!-- ========== End Header =========== -->
+    <main>
+      <!-- ==== Start Referenzen Section ===== -->
+      <section class="referenzen__section">
+        <div class="container">
+          <!-- Filter -->
+          <div class="row referenzen__section-filter">
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <p class="multiselect-label">Bereich</p>
+              <div class="multiselect" id="bereich" multiple="multiple" data-target="multi-0">
+                <div class="multiselect__title noselect">
+                    <span class="multiselect__title-text">Select</span>
+                    <span class="multiselect__title-icon multiselect__title-close">
+                      <i class="fas fa-angle-up"></i>
+                    </span>
+                    <span class="multiselect__title-icon multiselect__title-expand">
+                      <i class="fas fa-angle-down"></i>
+                    </span>
+                </div>
+                <div class="multiselect__container" id="first-select">
+                  <option value="Aluminium">
+                    Aluminium
+                  </option>
+                  <option value="Fassaden">
+                    Fassaden
+                  </option>
+                  <option value="Transport">
+                    Transport
+                  </option>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <p class="multiselect-label">Gebäudeart</p>
+              <div class="multiselect" id="gebaudeart" multiple="multiple" data-target="multi-0">
+                <div class="multiselect__title noselect">
+                    <span class="multiselect__title-text">Select</span>
+                    <span class="multiselect__title-icon multiselect__title-close">
+                      <i class="fas fa-angle-up"></i>
+                    </span>
+                    <span class="multiselect__title-icon multiselect__title-expand">
+                      <i class="fas fa-angle-down"></i>
+                    </span>
+                </div>
+                <div class="multiselect__container" id="second-select">
+                  <option value="Einfamilienhäuser">
+                    Einfamilienhäuser
+                  </option>
+                  <option value="Mehrfamilienhäuser">
+                    Mehrfamilienhäuser
+                  </option>
+                  <option value="Hochhäuser">
+                    HochhäuserHochhäuser
+                  </option>
+                  <option value="Einfkaufszenter">
+                    Einfkaufszenter
+                  </option>
+                  <option value="Gewerbe / Industrie">
+                    Gewerbe / Industrie
+                  </option>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <p class="multiselect-label">Produkt</p>
+              <div class="multiselect" id="produkt" multiple="multiple" data-target="multi-0">
+                <div class="multiselect__title noselect">
+                    <span class="multiselect__title-text">Select</span>
+                    <span class="multiselect__title-icon multiselect__title-close">
+                      <i class="fas fa-angle-up"></i>
+                    </span>
+                    <span class="multiselect__title-icon multiselect__title-expand">
+                      <i class="fas fa-angle-down"></i>
+                    </span>
+                </div>
+                <div class="multiselect__container">
+                  <option value="Alcubond®">
+                    Alcubond®
+                  </option>
+                  <option value="Alucore®">
+                    Alucore®
+                  </option>
+                  <option value="Dibond®">
+                    Dibond®
+                  </option>
+                  <option value="Hylite®">
+                    Hylite®
+                  </option>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4 d-flex">
+              <button type="button" class="mt-auto fitler-btn">
+                <span>Filter zurücksetzen</span>
+                <span><i class="fas fa-times"></i></span>
+              </button>
+            </div>
+          </div>
+          <!-- End Filter -->
+
+          <!-- Referenzen cards -->
+          <div class="row">
+            <!-- card 1 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 2 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 3 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 4 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 5 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 6 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 7 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 8 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 9 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 10 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 11 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 12 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 13 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 14 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 15 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-1.png" alt="referenzen 1">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+
+            <!-- card 16 -->
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+              <a href="#" class="bordered__card m-0">
+                <div class="bordered__card-img">
+                  <img src="./../assets/referenzen-2.png" alt="referenzen 2">
+                </div>
+                <div class="bordered__card-footer">
+                  <p class="bordered__card-footerParagraph">Alcubond®</p>
+                  <h5 class="bordered__card-footerTitle">MFH, Oberägeri</h5>
+                </div>
+              </a>
+            </div>
+            <!-- End cards -->
+          </div>
+          <!-- Referenzen cards -->
+        </div>
+      </section>
+      <!-- ===== End Referenzen Section ======= -->
+    </main>
+
+    <!-- ========== Start Footer =========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- logo container -->
+          <div class="col-md-4">
+
+            
+            <div class="footer__social">
+              <!-- Logo -->
+              <div class="footer__social-logo">
+                <a href="./../index.html">
+                  <img src="./../assets/footer-logo.png" alt="Allega Logo">
+                </a>
+              </div>
+
+              <!-- Address -->
+              <address class="footer__social-address">
+                Allega Gmbh <br>
+                Seeblerstrate 8172 <br>
+                Niederglatt
+              </address>
+
+              <!-- Contact links -->
+              <ul class="footer__social-list">
+                <!-- Item 1 -->
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                  <span class="footer__social-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                  +41 44 852 41 11
+                </a>
+              </li>
+
+              <!-- Item 2 -->
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                  <span class="footer__social-icon">
+                    <i class="fas fa-print"></i>
+                  </span>
+                  +41 44 852 43 433
+                </a>
+              </li>
+
+              <!-- Item 3 -->
+                <li class="footer__social-item">
+                  <a href="#" class="footer__social-link">
+                  <span class="footer__social-icon">
+                    <i class="far fa-envelope"></i>
+                  </span>
+                  info@allega.ch
+                </a>
+              </li>
+              <!-- End Items -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Links Lists 1 -->
+          <div class="col-md-2 col-sm-4 col-6">
+              <ul class="footer__list">
+                <h5 class="footer__list-title">Lösungen</h5>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">Aluminium</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="./fassaden.html">Fassaden</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">Transport</a>
+                </li>
+              </ul>
+          </div>
+          
+          <!-- Links Lists 2 -->
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+              <ul class="footer__list">
+                <h5 class="footer__list-title">Services</h5>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">Beratung</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">CNC-Bearbeitung</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">Logistik</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="#">LME</a>
+                </li>
+              </ul>
+          </div>
+
+          <!-- Links Lists 3 -->
+          <div class="col-lg-4 col-md-3 col-sm-4">
+            <ul class="footer__list">
+              <h5 class="footer__list-title">Unternehmen</h5>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Über uns</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Insights</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Team</a>
+              </li >
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="./career.html">Karriere</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Kontakt</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Nachhaltigeit</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Zerrtifikate</a>
+              </li >
+              <li class="footer__list-item">
+                <a  class="footer__list-link"href="#">Mitgliedschaften</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer lines -->
+        <div class="row footer__line-wrapper">
+          <div class="col-md-4 d-none d-md-block ">
+            <div class="footer-line"></div>
+          </div>
+          <div class="col-md-3 d-none d-md-block"></div>
+          <div class="col-md-5 col-sm-12">
+            <div class="footer-line"></div>
+          </div>
+        </div>
+
+        <!-- Footer Copyrights -->
+        <div class="row">
+          <div class="col-lg-5 col-md-4"></div>
+          <div class="col-lg-7 col-md-8 footer__copy">
+            <div class="footer__copy-right">
+              <p>&copy; <span id="copy_date">2021</span> Allega GmbH</p>
+            </div>
+            <ul class="footer__terms">
+              <li class="footer__terms-item">
+                <a class="footer__terms-link" href="#">AGB</a>
+              </li>
+              <li class="footer__terms-item">
+                <a class="footer__terms-link" href="#">Impressum</a>
+              </li>
+              <li class="footer__terms-item">
+                <a class="footer__terms-link" href="#">Datenschutz</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Footer Copyrights -->
+      </div>
+    </footer>
+    <!-- ========== End Footer =========== -->
+  </body>
+</html>

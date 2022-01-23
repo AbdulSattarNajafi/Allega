@@ -1,0 +1,252 @@
+// Cards Slider
+.slider {
+  position: relative;
+
+  &-btn {
+    position: absolute;
+    left: 13;
+    bottom: 8px;
+    display: inline-block;
+    width: 220px;
+    z-index: 100;
+
+    @include media-breakpoint-down(lg) {
+      bottom: 0;
+      width: 220px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      bottom: 3px;
+      width: 172px;
+    }
+  }
+}
+
+// Owl carousel
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+
+  .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden; /* fix firefox animation glitch */
+  }
+
+  .owl-stage:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+
+  .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  .owl-wrapper,
+  .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+  }
+
+  .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  .owl-item img {
+    display: block;
+    width: 100%;
+  }
+
+  .owl-nav.disabled,
+  .owl-dots.disabled {
+    display: none;
+  }
+
+  .owl-nav .owl-prev,
+  .owl-nav .owl-next,
+  .owl-dot {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .owl-nav button.owl-prev,
+  .owl-nav button.owl-next,
+  button.owl-dot {
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    height: 65px;
+    font-size: 2.2rem;
+    line-height: 1;
+    color: $primary;
+    border: 1px solid $gray-100;
+    border-radius: 50%;
+    transition: $hover-transition;
+
+    @include media-breakpoint-down(lg) {
+      width: 55px;
+      height: 55px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+      height: 50px;
+      font-size: 1.9rem;
+    }
+
+    &:hover {
+      border-color: $gray-700;
+    }
+  }
+
+  .owl-nav button.owl-prev {
+    margin-right: 30px;
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 10px;
+    }
+  }
+
+  &.owl-loaded {
+    display: block;
+  }
+
+  &.owl-loading {
+    opacity: 0;
+    display: block;
+  }
+
+  &.owl-hidden {
+    opacity: 0;
+  }
+
+  &.owl-refresh .owl-item {
+    visibility: hidden;
+  }
+
+  &.owl-drag .owl-item {
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &.owl-grab {
+    cursor: move;
+    cursor: grab;
+  }
+
+  &.owl-rtl {
+    direction: rtl;
+  }
+
+  &.owl-rtl .owl-item {
+    float: right;
+  }
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+// Owl Theme
+.owl-theme {
+  // Styling Next and Prev buttons
+  .owl-nav {
+    margin-top: 93px;
+    text-align: right;
+    -webkit-tap-highlight-color: transparent;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 60px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
+    }
+
+    [class*='owl-'] {
+      background-color: transparent;
+      font-size: 2.2rem;
+      margin: 1rem;
+      padding: 10px 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .disabled {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+
+  // Especial styling for home cards slider
+  &__home {
+    .owl-nav {
+      margin-top: 23px;
+    }
+  }
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        background: yellowgreen;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+        border-radius: 50%;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: orangered;
+        }
+      }
+    }
+  }
+}

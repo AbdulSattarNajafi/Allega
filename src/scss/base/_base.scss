@@ -1,0 +1,124 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+.row-container {
+  padding: 45px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 30px 0;
+  }
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+[type='text'].form-control:focus,
+[type='password'].form-control:focus,
+[type='email'].form-control:focus,
+[type='tel'].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: none;
+}
+
+[type='checkbox']:checked,
+[type='checkbox']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type='checkbox']:checked + label,
+[type='checkbox']:not(:checked) + label {
+  position: relative;
+  padding-left: 54px;
+  cursor: pointer;
+  line-height: 30px;
+  display: inline-block;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 50px;
+    line-height: 26px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 40px;
+    line-height: 20px;
+  }
+}
+[type='checkbox']:checked + label {
+  color: $black;
+}
+[type='checkbox']:checked + label:before,
+[type='checkbox']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $primary;
+  background: transparent;
+
+  @include media-breakpoint-down(lg) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 20px;
+    height: 20px;
+  }
+}
+[type='checkbox']:checked + label:after,
+[type='checkbox']:not(:checked) + label:after {
+  content: '';
+  background: $secondary;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+
+  @include media-breakpoint-down(lg) {
+    width: 18px;
+    height: 18px;
+    top: 4px;
+    left: 4px;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 4px;
+  }
+}
+[type='checkbox']:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type='checkbox']:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
